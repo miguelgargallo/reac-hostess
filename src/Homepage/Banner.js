@@ -8,7 +8,7 @@ const Banner = () => {
     <div className='banner'>
       <img src={unicefLogo} alt='unicefLogo' />
       <div>
-        <p>Donate to support families affected by the war in Ukraine</p>
+        <p>¿Nos sigues ya en Instagram? Entérate de las últimas oportunidades</p>
         <IconContext.Provider value={{ color: "#06c" }}>
           <FiArrowUpRight />
         </IconContext.Provider>

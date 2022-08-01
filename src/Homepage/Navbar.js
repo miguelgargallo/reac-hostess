@@ -3,7 +3,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import { IconContext } from "react-icons";
 
 import { navbarItems } from "./dataHomepage";
-//navbarItemsMobile
+import { navbarItemsMobile } from "./dataHomepage";
 
 import appleLogo from "../images/globalnav_apple_image__b5er5ngrzxqq_large.svg";
 import bag from "../images/globalnav_bag_image__yzte50i47ciu_large.svg";

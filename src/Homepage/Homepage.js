@@ -12,6 +12,7 @@ import {
 
 //components
 import Navbar from "./Navbar";
+import navbarItemsMobile from "./Navbar";
 import Banner from "./Banner";
 import PrimaryInsertion from "./PrimaryInsertion";
 import GridInsertion from "./GridInsertion";
@@ -21,7 +22,6 @@ const Homepage = () => {
   return (
     <>
       <Navbar />
-      <Banner />
 
       {primaryInsertionItems.map((item) => {
         return <PrimaryInsertion key={item.id} {...item} />;

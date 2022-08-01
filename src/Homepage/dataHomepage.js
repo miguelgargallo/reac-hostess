@@ -1,18 +1,3 @@
-//navbar images
-// import appleLogo from "../images/globalnav_apple_image__b5er5ngrzxqq_large.svg";
-import store from "../images/globalnav_links_store_image__c7jy08initqq_large.svg";
-import mac from "../images/globalnav_links_mac_image__dazlko3t9a6a_large.svg";
-import ipad from "../images/globalnav_links_ipad_image__fw9qyj9lloi2_large.svg";
-import iphone from "../images/globalnav_links_iphone_image__ko7x4isga4ia_large.svg";
-import watch from "../images/globalnav_links_watch_image__gkoblojrlsqe_large.svg";
-import airpods from "../images/globalnav_links_airpods_image__f969s84ivmaa_large.svg";
-import tvHome from "../images/globalnav_links_tvhome_image__zb2ewyxbi6ae_large.svg";
-import onlyOnApple from "../images/globalnav_links_onlyonapple_image__c4t8k97tougm_large.svg";
-import accessories from "../images/globalnav_links_accessories_image__edj0wqmfwxyu_large.svg";
-import support from "../images/globalnav_links_support_image__bw9kctll7u3m_large.svg";
-//import searchLens from "../images/search-icon-navbar.svg";
-// import bag from "../images/globalnav_bag_image__yzte50i47ciu_large.svg";
-
 //primary insertion images
 import iphone13pro from "../images/hero_iphone13pro_avail__iy77cld0zwii_medium_2x.jpg";
 import iphoneSE from "../images/hero_iphonese_avail__eg8srhcnpo66_medium_2x.jpg";
@@ -31,106 +16,60 @@ import shiningGirls from "../images/promo_shining_girls__dcjn8g4xb2qa_large_2x.j
 import iPhone13 from "../images/promo_iphone13_avail__frc36u35m0ii_large_2x.jpg";
 import appleTV from "../images/logo_light__cfvl40z2nzau_large_2x.png";
 
-// export const navbarItemsMoble = [
-//   {
-//     id: 1,
-//     imagePath: hamburger,
-//     linkUrl: "",
-//     name: "appleLogo",
-//   },
-//   {
-//     id: 2,
-//     imagePath: appleLogo,
-//     linkUrl: "",
-//     name: "appleLogo",
-//   },
-//   {
-//     id: 3,
-//     imagePath: appleLogo,
-//     linkUrl: "",
-//     name: "appleLogo",
-//   },
-// ];
-
 export const navbarItems = [
-  // {
-  //   id: 1,
-  //   imagePath: appleLogo,
-  //   linkUrl: "",
-  //   name: "appleLogo",
-  // },
+
   {
     id: 2,
-    imagePath: store,
-    linkUrl: "",
-    name: "Store",
+    linkUrl: "https://bcnhostess.com/alta",
+    name: "Inscríbete",
+    color: "#06c",
   },
   {
     id: 3,
-    imagePath: mac,
-    linkUrl: "",
-    name: "Mac",
+    linkUrl: "https://bcnhostess.com/presupuesto/",
+    name: "Presupuesto",
+    color: "#06c",
   },
   {
     id: 4,
-    imagePath: ipad,
-    linkUrl: "",
-    name: "iPad",
+    linkUrl: "https://bcnhostess.com/conocenos/",
+    name: "Conócenos",
+    color: "#06c",
   },
   {
     id: 5,
-    imagePath: iphone,
-    linkUrl: "",
-    name: "iPhone",
+    linkUrl: "https://bcnhostess.com/contacto/",
+    name: "Contacto",
+    color: "#06c",
+  },
+];
+
+export const navbarItemsMobile = [
+  
+  {
+    id: 2,
+    linkUrl: "https://bcnhostess.com/alta",
+    name: "Inscríbete",
+    color: "#06c",
   },
   {
-    id: 6,
-    imagePath: watch,
-    linkUrl: "",
-    name: "Watch",
+    id: 3,
+    linkUrl: "https://bcnhostess.com/presupuesto/",
+    name: "Presupuesto",
+    color: "#06c",
   },
   {
-    id: 7,
-    imagePath: airpods,
-    linkUrl: "",
-    name: "Airpods",
+    id: 4,
+    linkUrl: "https://bcnhostess.com/conocenos/",
+    name: "Conócenos",
+    color: "#06c",
   },
   {
-    id: 9,
-    imagePath: tvHome,
-    linkUrl: "",
-    name: "Tv & Home",
+    id: 5,
+    linkUrl: "https://bcnhostess.com/contacto/",
+    name: "Contacto",
+    color: "#06c",
   },
-  {
-    id: 10,
-    imagePath: onlyOnApple,
-    linkUrl: "",
-    name: "Only on Apple",
-  },
-  {
-    id: 11,
-    imagePath: accessories,
-    linkUrl: "",
-    name: "Accessories",
-  },
-  {
-    id: 12,
-    imagePath: support,
-    linkUrl: "",
-    name: "Support",
-  },
-  // {
-  //   id: 13,
-  //   imagePath: searchLens,
-  //   linkUrl: "",
-  //   name: "searchLens",
-  // },
-  // {
-  //   id: 14,
-  //   imagePath: bag,
-  //   linkUrl: "",
-  //   name: "bag",
-  // },
 ];
 
 export const primaryInsertionItems = [
@@ -145,7 +84,7 @@ export const primaryInsertionItems = [
   {
     id: 2,
     pre: "The new",
-    //imageTitle: iphoneSE,
+    imageTitle: iphoneSE,
     title: "iPhone SE",
     subtitle: "Love the power. Love the price.",
     imagePath: iphoneSE,
