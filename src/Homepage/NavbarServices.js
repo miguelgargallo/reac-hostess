@@ -2,25 +2,26 @@ import React, { useState, useEffect } from "react";
 import { IoCloseOutline } from "react-icons/io5";
 import { IconContext } from "react-icons";
 
-import { navbarItems } from "./dataHomepage";
+import { NavbarServicesItems } from "./dataHomepage";
+import { NavbarServicesItemsMobile } from "./dataHomepage";
 
 import appleLogo from "../images/globalnav_apple_image__b5er5ngrzxqq_large.svg";
 import bag from "../images/globalnav_bag_image__yzte50i47ciu_large.svg";
-import searchLens from "../images/search-icon-navbar.svg";
+import searchLens from "../images/search-icon-NavbarServices.svg";
 
 let self = "#";
 
-const NavbarItem = ({ imagePath, linkUrl, name }) => {
+const NavbarServicesItem = ({ imagePath, linkUrl, name }) => {
   // console.log(imagePath);
   return (
-    <li className='navbarItemOnlyDesktop'>
+    <li className='NavbarServicesItemOnlyDesktop'>
       <a href={linkUrl}>
         <img src={imagePath} alt={name} />
       </a>
     </li>
   );
 };
-const Navbar = () => {
+const NavbarServices = () => {
   const [isActive, setActive] = useState(false);
   const [isBagActive, setBagActive] = useState(false);
   const [isSearchActive, setIsSearchActive] = useState(false);
@@ -55,10 +56,10 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={isActive ? "navbar-active" : isSearchActive ? "hide" : ""}
+        className={isActive ? "NavbarServices-active" : isSearchActive ? "hide" : ""}
       >
         <ul>
-          <li className='navbarItemOnlyMobile'>
+          <li className='NavbarServicesItemOnlyMobile'>
             <div
               className={isActive ? "open" : "hamburger"}
               onClick={ToggleClass}
@@ -72,10 +73,10 @@ const Navbar = () => {
               <img src={appleLogo} alt='appleLogo' />
             </a>
           </li>
-          {navbarItems.map((item) => {
-            return <NavbarItem key={item.id} {...item} />;
+          {NavbarServicesItems.map((item) => {
+            return <NavbarServicesItem key={item.id} {...item} />;
           })}
-          <li onClick={toggleSearch} className='navbarItemOnlyDesktop'>
+          <li onClick={toggleSearch} className='NavbarServicesItemOnlyDesktop'>
             <img src={searchLens} alt='searchLens' />
           </li>
           <li className={isActive ? "hide-bag" : "bag-icon"}>
@@ -175,7 +176,7 @@ const Menu = ({ isActive, isSearchMobileActive, toggleSearchMobile }) => {
         </div>
       </div>
       <ul>
-        {navbarItems
+        {NavbarServicesItems
           .filter((item) => item.id !== 13)
           .map((item) => {
             return <li>{item.name}</li>;
@@ -184,4 +185,4 @@ const Menu = ({ isActive, isSearchMobileActive, toggleSearchMobile }) => {
     </div>
   );
 };
-export default Navbar;
+export default NavbarServices;

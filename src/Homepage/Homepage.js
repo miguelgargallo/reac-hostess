@@ -12,25 +12,16 @@ import {
 
 //components
 import Navbar from "./Navbar";
-import navbarItemsMobile from "./Navbar";
-import Banner from "./Banner";
-import PrimaryInsertion from "./PrimaryInsertion";
-import GridInsertion from "./GridInsertion";
+import Body from "./Body";
 import Footer from "./Footer";
 
 const Homepage = () => {
   return (
     <>
-      <Navbar />
+          <head />
 
-      {primaryInsertionItems.map((item) => {
-        return <PrimaryInsertion key={item.id} {...item} />;
-      })}
-      <div className='gridInsertionContainer'>
-        {gridInsertionItems.map((item) => {
-          return <GridInsertion key={item.id} {...item} />;
-        })}
-      </div>
+      <Navbar />
+   <Body />
       <Footer />
     </>
   );
