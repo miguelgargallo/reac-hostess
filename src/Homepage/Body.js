@@ -1,197 +1,112 @@
-import { useState } from "react";
+import React, { useState, useCallback } from "react";
 
-let self = "#";
-
-const MenuItem = ({ title, children }) => {
-  const [displaySubMenu, setDisplaySubMenu] = useState(false);
-
-  const handleDisplaySubMenu = () => {
-    setDisplaySubMenu(!displaySubMenu);
-  };
-
+function Body() {
   return (
-    <>
-      <li className='menu-item-footer' onClick={handleDisplaySubMenu}>
-        {displaySubMenu ? (
-          <div>
-            <span style={{ color: "black" }}>{title}</span>
-            <span style={{ color: "black" }}>x</span>
-          </div>
-        ) : (
-          <div>
-            <span>{title}</span>
-            <span>+</span>{" "}
-          </div>
-        )}
-        {displaySubMenu && children}
-      </li>
-    </>
+    <div className="wrapper">
+      <img src="" />
+      <Card
+        img="https://bcnhostess.com/wp-content/uploads/Tinder.jpg"
+        title="Tinder"
+        tags="Eventos, Street Marketing"
+        description="Evento en el Hotel Wela, en donde se informo el funcionamiento de la aplicación"
+      />
+
+      <Card
+        img="https://bcnhostess.com/wp-content/uploads/perrier-1.jpg"
+        title="Perrier"
+        tags=" Bebidas, Eventos, Festival, Sampling"
+        description=" Evento con Perrier en festivales: Madrid - Mercado de diseño, Mercado de Motores, Mulafest / Barcelona - Estacio Disenny, Monumental "
+      />
+
+      <Card
+        img="https://bcnhostess.com/wp-content/uploads/VICE4.jpg"
+        title="VICE"
+        tags="Eventos, Fashion"
+        description=" Festival Cara B, es un festival de cultura musical independiente y urbana, que se celebra en Barcelona, se posiciona como el principal escaparate de las tendencias musicales y los sonidos más frescos del momento. "
+      />
+
+      <Card
+        img="https://bcnhostess.com/wp-content/uploads/Samsung.jpg"
+        title="Samsung"
+        tags="Eventos"
+        description="vento privado para invitados del MWC (mobile World congress)."
+      />
+      <Card
+        img="https://bcnhostess.com/wp-content/uploads/Figaro2-1.jpg"
+        title="Figaro"
+        tags="Eventos, Peluquería"
+        description=" Premios Fígaro. El evento más importante del calendario de la peluquería española, donde se presentaron las quince colecciones finalistas antes de la entrega de galardones."
+      />
+      <Card
+        img="https://bcnhostess.com/wp-content/uploads/Movistar-1-1.jpg"
+        title="Movistar"
+        tags="Eventos, Fashion"
+        description=" Durante años fuimos los responsable de proveer el staff para grandes premios no solo de F1 sino que también de Moto GP, conocemos muy bien los protocolos de actuación en los circuitos."
+      />
+      <Card
+        img="https://bcnhostess.com/wp-content/uploads/Telefonica-2.jpg"
+        title="Telefónica"
+        tags="Eventos, Eventos deportivos"
+        description=" Proveedores oficiales durante 4 años, evento realizado en Diagonal 00 Torre Telefónica."
+      />
+      <Card
+        img="https://bcnhostess.com/wp-content/uploads/IQOS_3.2.jpg"
+        title="IQOS"
+        tags="Eventos, In Store"
+        description=" Co_Lab Café by IQOS, Madrid. Espacio en el que nuestros expertos te asesorarán sobre este nuevo dispositivo electrónico que calienta el tabaco en lugar de quemarlo y te resolverán cualquier duda o incidencia. Pensado para reunir diversas personalidades, conectar ideas, promocionar la experimentación y compartir ejemplos sobre transformación y cambio."
+      />
+      <Card
+        img="https://bcnhostess.com/wp-content/uploads/VIKINGO.jpg"
+        title="Vikingo"
+        tags="Bebidas, Eventos"
+        description=" Evento realizado en el congreso CCIB (centre convencions internacional Barcelona)."
+      />
+      <Card
+        img="https://bcnhostess.com/wp-content/uploads/Corona.jpg"
+        title="Corona"
+        tags="Bebidas, Eventos, Street Marketing"
+        description=" Campaña de verano realizada en Barcelona y alrededores. "
+      />
+      <Card
+        img="https://bcnhostess.com/wp-content/uploads/ee318ded-4f4b-44d0-8472-c82b1aa302ea-1.jpg"
+        title="Beefeater"
+        tags="Bebidas, Eventos, Street Marketing"
+        description=" Evento con Beefeater en Mad Cool Festival. Festival de música que se realiza en Madrid en donde el arte, la moda, la gastronomía y el turismo se unen eclécticamente."
+      />
+      <Card
+        img="https://bcnhostess.com/wp-content/uploads/Montibello0.jpg"
+        title="Montibello"
+        tags="Eventos, Peluquería"
+        description="Gala realizada en la feria Cosmo Beauty. Montibello hoy es uno de nuestros principales clientes, dedicada a la fabricación y distribución de productos de cosmética profesional."
+      />
+      <Card
+        img="https://bcnhostess.com/wp-content/uploads/Adidas_1.jpg"
+        title="Adidas"
+        tags="Eventos deportivos, Motor"
+        description="Presentación nuevo lanzamiento, en el Gran Premio de España F1, Montemelo, circuito de Catalunya."
+      />
+      <Card
+        img="https://bcnhostess.com/wp-content/uploads/MYM.jpg"
+        title="M&M"
+        tags="Sampling"
+        description=" Campaña de Sampling M&M, realizada en Andorra y Baqueira. "
+      />
+    </div>
   );
-};
+}
 
-const Footer = () => {
+function Card(props) {
   return (
-    <footer>
-      <div className="footer-container">
-        <div className="upper-text">
-          <p>
-            1. Mediante la ley de protección de datos, notificamos que las
-            cookies que recogemos son con Google Analytics y Google Search
-            Console, para ussos de recogida esenciales.
-          </p>
-          <p>
-            2. El teléfono de contacto en territorio nacional es gratuito, no nos hacemos responsables de cargos adicionales en llamadas internacionales.
-          </p>
-        </div>
-        <div className="footer-desktop-list">
-          <div className="col1">
-            <ul className=" services-list">
-              <li className="footer-list-title">Acerca de Nosotros</li>
-              <a href="https://bcnhostess.com/alta/" target="_blank">
-                <li className="sub-menu-item-footer">Inscríbete</li>
-              </a>
-              <a href="https://bcnhostess.com/presupuesto/" target="_blank">
-                <li className="sub-menu-item-footer">Presupuesto</li>
-              </a>
-              <a href="https://bcnhostess.com/conocenos/">
-                <li className="sub-menu-item-footer">Conócenos</li>
-              </a>
-              <a href="https://bcnhostess.com/contacto/">
-                <li className="sub-menu-item-footer">Contacto</li>
-              </a>
-            </ul>
-          </div>
-          <div className="col2">
-            <ul className=" services-list">
-              <li className="footer-list-title">Servicios</li>
-              <a href="https://bcnhostess.com/in-store/">
-                <li className="sub-menu-item-footer">In Store</li>
-              </a>
-              <a href="https://bcnhostess.com/street-marketing/">
-                <li className="sub-menu-item-footer">Street Marketing</li>
-              </a>
-              <a href="https://bcnhostess.com/ferias-y-congresos/">
-                <li className="sub-menu-item-footer">Ferias y Congresos</li>
-              </a>
-              <a href="https://bcnhostess.com/acciones-de-imagen/">
-                <li className="sub-menu-item-footer">Eventos de Imágen</li>
-              </a>
-              <a href="https://bcnhostess.com/otros-servicios/">
-                <li className="sub-menu-item-footer">Otros</li>
-              </a>
-              <a href="https://bcnhostess.com/uniformes/">
-                <li className="sub-menu-item-footer">Uniformes</li>
-              </a>
-            </ul>
-          </div>
-          <div className="col3">
-            <ul className=" services-list">
-              <li className="footer-list-title">Síguenos</li>
-              <a
-                href="https://www.facebook.com/barcelona.hostess/"
-                target="_blank"
-              >
-                <li className="sub-menu-item-footer"> 6K Likes Facebook</li>
-              </a>
-              <a
-                href="https://www.instagram.com/barcelona_hostess/"
-                target="_blank"
-              >
-                <li className="sub-menu-item-footer">+ 4.3K Instagram</li>
-              </a>
-            </ul>
-          </div>
-        </div>
-        {/* Mobile footer: */}
-        <div className="footer-mobile-list">
-          <ul>
-            <MenuItem title="Acerca de Nosotros">
-              <ul className="sub-menu-footer">
-                <a href="https://bcnhostess.com/alta/" target="_blank">
-                  <li className="sub-menu-item-footer">Inscríbete</li>
-                </a>
-                <a href="https://bcnhostess.com/presupuesto/" target="_blank">
-                  <li className="sub-menu-item-footer">Presupuesto</li>
-                </a>
-                <a href="https://bcnhostess.com/conocenos/">
-                  <li className="sub-menu-item-footer">Conócenos</li>
-                </a>
-                <a href="https://bcnhostess.com/contacto/">
-                  <li className="sub-menu-item-footer">Contacto</li>
-                </a>
-              </ul>
-            </MenuItem>
-            <MenuItem title="Servicios">
-              <ul className="sub-menu-footer">
-                <a href="https://bcnhostess.com/in-store/">
-                  <li className="sub-menu-item-footer">In Store</li>
-                </a>
-                <a href="https://bcnhostess.com/street-marketing/">
-                  <li className="sub-menu-item-footer">Street Marketing</li>
-                </a>
-                <a href="https://bcnhostess.com/ferias-y-congresos/">
-                  <li className="sub-menu-item-footer">Ferias y Congresos</li>
-                </a>
-                <a href="https://bcnhostess.com/acciones-de-imagen/">
-                  <li className="sub-menu-item-footer">Eventos de Imágen</li>
-                </a>
-                <a href="https://bcnhostess.com/otros-servicios/">
-                  <li className="sub-menu-item-footer">Otros</li>
-                </a>
-                <a href="https://bcnhostess.com/uniformes/">
-                  <li className="sub-menu-item-footer">Uniformes</li>
-                </a>
-              </ul>
-            </MenuItem>
-            <MenuItem title="Síguenos">
-              <ul className="sub-menu-footer">
-                <a
-                  href="https://www.facebook.com/barcelona.hostess/"
-                  target="_blank"
-                >
-                  <li className="sub-menu-item-footer"> 6K Likes Facebook</li>
-                </a>
-                <a
-                  href="https://www.instagram.com/barcelona_hostess/"
-                  target="_blank"
-                >
-                  <li className="sub-menu-item-footer">+ 4.3K Instagram</li>
-                </a>
-              </ul>
-            </MenuItem>
-          </ul>
-        </div>
-        <div className="more">
-          Más formas de contactar:{" "}
-          <a
-            href="https://goo.gl/maps/RSaLJip2A9berE6A7"
-            target="_blank"
-            className="blue-link footer-link"
-          >
-            Encuéntranos en Google Maps
-          </a>{" "}
-          or{" "}
-          <a href={self} className="blue-link footer-link">
-            llámanos
-          </a>{" "}
-          ahora <a href="tel:933426265">933426265</a>. (2)
-        </div>
-        <div className="sub-footer">
-          <div className="country-footer">España</div>
-          <div className="copyright">
-            <span>
-              Copyright © 2022 BCN Hostess. Todos los derechos reservados.
-            </span>
-          </div>
-          <div className="links">
-            <span className="span-footer"><a href="https://bcnhostess.com/politica-privacidad/" target="_blank">Política de Privacidad</a></span>
-            <span className="span-footer"><a href="https://candidatos.bcnhostess.com/registro/condiciones.pdf/" target="_blank">Términos de Uso</a></span>
-            <span className="span-footer"><a href="https://bcnhostess.com/aviso-legal/" target="_blank">Legal</a></span>
-          </div>
-        </div>
+    <div className="card">
+      <div className="card__body">
+        <img src={props.img} class="card_image" />
+
+        <h2 classname="card__title">{props.title}</h2>
+        <h3 classname="card__tags">{props.tags}</h3>
+        <h2 classname="card__description">{props.description}</h2>
       </div>
-    </footer>
+    </div>
   );
-};
+}
 
-export default Footer;
+export default Body;
