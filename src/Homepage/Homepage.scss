@@ -1,4 +1,6 @@
 @import "../../public/styles/variables";
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+
 nav {
   background-color: $black;
   height: 48px;
@@ -946,8 +948,8 @@ footer {
         opacity: 0.8;
       }
     }
+    
   }
-  @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 
 /*   color variables */
 $clr-primary: #d50000;
@@ -965,22 +967,9 @@ $clr-gray700: #161d34;
 /*   border radius */
 $radius: 0.2rem;
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Oxygen, sans-serif;
-  margin: 0rem;
-}
-
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60rem, 60rem));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 30rem));
   gap: 2rem;
   justify-content: center;
 }
@@ -996,8 +985,8 @@ body {
   transition: transform 200ms ease-in;
 
   &__image {
-    height: 6rem;
-    width: 50%;
+    height: 20rem;
+    width: 100%;
     object-fit: cover;
   }
 

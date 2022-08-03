@@ -99,7 +99,7 @@ function Card(props) {
   return (
     <div className="card">
       <div className="card__body">
-        <img src={props.img} class="card_image" />
+        <img src={props.img} class="card__image" />
 
         <h2 classname="card__title">{props.title}</h2>
         <h3 classname="card__tags">{props.tags}</h3>
@@ -107,6 +107,9 @@ function Card(props) {
       </div>
     </div>
   );
+  
 }
+
+
 
 export default Body;
